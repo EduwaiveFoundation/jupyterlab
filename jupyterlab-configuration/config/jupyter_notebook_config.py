@@ -315,6 +315,7 @@ c.NotebookApp.ip = '*'
 #  RECOMMENDED.
 #
 c.NotebookApp.token = u''
+c.GitHubConfig.access_token = '27c5f0ad197e3c5e22d3654ad43aef08674dc56d'
 
 ## Supply overrides for the tornado.web.Application that the Jupyter notebook
 #  uses.
