@@ -8,6 +8,7 @@ RUN jupyter labextension install @jupyterlab/github
 RUN pip install jupyterlab_github
 RUN jupyter serverextension enable --sys-prefix jupyterlab_github
 RUN jupyter labextension install @jupyterlab/google-drive
+RUN jupyter labextension install @jupyterlab/geojson-extension
 
 RUN pip install numpy
 RUN pip install scipy
@@ -23,8 +24,11 @@ RUN pip install google-cloud-vision
 RUN pip install google-cloud-videointelligence
 
 RUN pip install matplotlib
-RUn pip install gcs-oauth2-boto-plugin
-
+RUN pip install gcs-oauth2-boto-plugin
+RUN pip install -U fastparquet
+RUN pip install -U pyarrow
+RUN pip install xlrd
+RUN pip install datalab
 
 RUN apt-get update -y && apt install git -y
 
