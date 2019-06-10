@@ -29,8 +29,11 @@ RUN pip install -U fastparquet
 RUN pip install -U pyarrow
 RUN pip install xlrd
 RUN pip install datalab
-
+RUN pip install -U googlemaps
+RUN pip install SQLAlchemy
+RUN pip install mysql-connector
 RUN apt-get update -y && apt install git -y
+RUN apt-get install mysql-client -y
 
 RUN export CLOUD_SDK_REPO="cloud-sdk-bionic" && \
     echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
